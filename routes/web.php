@@ -11,41 +11,28 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/debug', function() {
 
-    echo '<pre>';
+Route::get('/', 'MustangController@index')->name('stangs.index');
+Route::get('/mustang', 'MustangController@create')->name('stangs.create');
+Route::post('/mustang', 'MustangController@show')->name('stangs.show');
+Route::get('/mymustang', 'MyMustangController@create')->name('stangs.create');
+Route::post('/mymustang', 'MyMustangController@store')->name('stangs.store');
 
-    echo '<h1>Environment</h1>';
-    echo App::environment().'</h1>';
+# Show form to edit a book
+Route::get('/edit', 'MyMustangController@show')->name('stangs.show');
+Route::post('/edit', 'MyMustangController@edit')->name('stangs.edit');
 
-    echo '<h1>Debugging?</h1>';
-    if(config('app.debug')) echo "Yes"; else echo "No";
 
-    echo '<h1>Database Config</h1>';
-    /*
-    The following line will output your MySQL credentials.
-    Uncomment it only if you're having a hard time connecting to the database and you
-    need to confirm your credentials.
-    When you're done debugging, comment it back out so you don't accidentally leave it
-    running on your live server, making your credentials public.
-    */
-    //print_r(config('database.connections.mysql'));
-
-    echo '<h1>Test Database Connection</h1>';
-    try {
-        $results = DB::select('SHOW DATABASES;');
-        echo '<strong style="background-color:green; padding:5px;">Connection confirmed</strong>';
-        echo "<br><br>Your Databases:<br><br>";
-        print_r($results);
-    }
-    catch (Exception $e) {
-        echo '<strong style="background-color:crimson; padding:5px;">Caught exception: ', $e->getMessage(), "</strong>\n";
-    }
-
-    echo '</pre>';
-
-});
+# Process form to edit a book
+Route::put('/edit', 'MyMustangController@update')->name('stangs.update');
+# Get route to confirm deletion of book
+Route::get('/delete', 'MyMustangController@delete')->name('stangs.destroy');
+# Delete route to actually destroy the book
+Route::delete('/delete', 'MyMustangController@destroy')->name('stangs.destroy');
+/*
+Route::get('/users', 'MustangController@create')->name('users.create');
+Route::post('/users', 'UserController@store')->name('users.store');
+Route::get('/password', 'PasswordController@create')->name('password.create');
+Route::post('/password', 'PasswordController@store')->name('password.store');
+*/
