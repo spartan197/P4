@@ -72,12 +72,12 @@
                 <div class='error'>{{ $errors->first('fuel_economy') }}</div>
              </div>
             <br>
-            
+
             <div class='form-instructions'>
                 *All fields are required
             </div>
 
-            <button type="submit" class="button">Edit My Mustang</button>
+            <button type="submit" class="button">Update My Mustang</button>
 
             <div class='error'>
                 @if(count($errors) > 0)
