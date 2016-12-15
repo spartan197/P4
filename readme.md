@@ -8,7 +8,7 @@ Description of the project (2-3+ sentences):
       This "Mustang App" allows the user to view details of different Mustangs. The app also allows you to add details of your Mustang(s), edit them and delete them. The details of your Mustangs will be user specific. So, each user will be able to access only their account details. This app also has a register and login page. Database relationships have also been used for this project.
 
 Link to your screencast demo:
-
+      
 
 Bulleted list of where we can see your 4 CRUD operations in action.
       Create:  http://p4.omarkhan.biz/mymustang
