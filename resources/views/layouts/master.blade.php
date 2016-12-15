@@ -2,8 +2,8 @@
 <html>
 <head>
     <title>
-        {{-- Yield the title if it exists, otherwise default to 'The Mustang Site' --}}
-        @yield('title','The Mustang Site')
+        {{-- Yield the title if it exists, otherwise default to 'The Mustang App' --}}
+        @yield('title','The Mustang App')
     </title>
 
     <meta charset='utf-8'>
@@ -20,7 +20,7 @@
       @endif
 
     <header>
-      <h1>The Mustang Site</h1>
+      <h1>The Mustang App</h1>
     </header>
 
     <nav>
