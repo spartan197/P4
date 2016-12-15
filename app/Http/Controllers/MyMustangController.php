@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\MyMustang;
+use App\Mymustang;
 use Session;
 
 class MyMustangController extends Controller
