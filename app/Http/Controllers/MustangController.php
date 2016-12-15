@@ -53,7 +53,7 @@ class MustangController extends Controller
           if($mustang->year_of_manufacture == $year)
               $mus = $mustang;
       }
-      return view('stang.show1')->with('mus', $mus);
+      return view('stang.display_table')->with('mus', $mus);
     }
 
     /**

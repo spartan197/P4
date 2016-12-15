@@ -5,7 +5,7 @@
 {{-- Displaying random text --}}
 @section('content')
 
-<table>
+<table align="center">
     <tr>
         <th><h2>Description</h2></th>
         <th><h2>Value</h2></th>

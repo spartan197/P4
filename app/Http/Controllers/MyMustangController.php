@@ -78,7 +78,7 @@ class MyMustangController extends Controller
            $mymustangs = [];
        }
 
-      return view('stang.show2')->with('mymustangs', $mymustangs);
+      return view('stang.edit_message')->with('mymustangs', $mymustangs);
     }
 
     /**
