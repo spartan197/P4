@@ -19,7 +19,7 @@
            <option value="2016">2016</option>
         </select> </h2>
         <br>
-        <input type='submit' class="button" value='Generate Text'>
+        <input type='submit' class="button" value='Get Details'>
 
 
     </form>

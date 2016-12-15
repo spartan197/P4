@@ -18,9 +18,7 @@
            <option value="2007">2007</option>
            <option value="2016">2016</option>
         </select> </h2>
-        <h2>No. of paragraphs:  &nbsp;&nbsp;
-        <input type='text' name='NoOfParagraphs' maxlength="2" value='{{ old("title") }}'></h2>
-        <br>
+        
         <input type='submit' class="button" value='Generate Text'>
 
         {{-- Throws an error if the input is anything else other than a number between 1-99 --}}

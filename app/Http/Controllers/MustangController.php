@@ -15,10 +15,9 @@ class MustangController extends Controller
     public function index()
     {
       $mustangs = Mustang::all();
-
       return view('stang.index')->with(['mustangs'=>$mustangs]);
 
-          //return view('stang.index');
+
     }
 
     /**

@@ -24,15 +24,21 @@
     </header>
 
     <nav>
-       <ul>
-           <li><a href='/'>Home</a></li>
-           <li><a href='/mustang'>Mustangs</a></li>
-           <li><a href='/mymustang'>Add My Mustang</a></li>
-           <li><a href='/edit'>Edit My Mustang</a></li>
-           <li><a href='/delete'>Delete My Mustang</a></li>
+      <ul>
+          @if(Auth::check())
+              <li><a href='/'>Home</a></li>
+              <li><a href='/mustang'>Mustangs</a></li>
+              <li><a href='/mymustang'>Add My Mustang</a></li>
+              <li><a href='/edit'>Edit My Mustang</a></li>
+              <li><a href='/delete'>Delete My Mustang</a></li>              <li><a href='/logout'>Log out</a></li>
+          @else
+              <li><a href='/'>Home</a></li>
+              <li><a href='/login'>Log in</a></li>
+              <li><a href='/register'>Register</a></li>
+          @endif
+      </ul>
+    </nav>
 
-       </ul>
-   </nav>
    <br>
 
 

@@ -64,7 +64,7 @@ class MyMustangController extends Controller
       $mymustang->horsepower = $request->input('horsepower');
       $mymustang->torque = $request->input('torque');
       $mymustang->fuel_economy = $request->input('fuel_economy');
-      //$book->user_id = $request->user()->id;
+      $mymustang->user_id = $request->user()->id;
       $mymustang->save();
       # Save Tags
       Session::flash('flash_message', 'Your '.$mymustang->name.' was added.');
@@ -80,8 +80,17 @@ class MyMustangController extends Controller
      */
     public function show(Request $request)
     {
-      $mymustangs = MyMustang::all();
+
+      $user = $request->user();
+       if($user) {
+           $mymustangs = $user->mymustangs()->get();
+       }
+       else {
+           $mymustangs = [];
+       }
+
       return view('stang.show2')->with('mymustangs', $mymustangs);
+
     }
 
     /**
@@ -92,10 +101,10 @@ class MyMustangController extends Controller
      */
     public function edit(Request $request)
     {
-      
-      $id = $request->input('id');
-      $mymustangs = MyMustang::all();
-      foreach($mymustangs as $mymustang) {
+
+       $id = $request->input('id');
+       $mymustangs = MyMustang::all();
+       foreach($mymustangs as $mymustang) {
           if($mymustang->id == $id)
               $must = $mymustang;
       }
@@ -144,8 +153,29 @@ class MyMustangController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete(Request $request)
     {
-        //
+
+      $user = $request->user();
+       if($user) {
+           $mymustangs = $user->mymustangs()->get();
+       }
+       else {
+           $mymustangs = [];
+       }
+      return view('stang.selectdelete')->with('mymustangs', $mymustangs);
     }
+
+    public function destroy(Request $request)
+    {
+      # Get the book to be deleted
+             $mymustang = MyMustang::find($request->id);
+
+
+             # Then delete the book
+             $mymustang->delete();
+             # Finish
+             Session::flash('flash_message', $mymustang->name.' was deleted.');
+             return redirect('/');
+        }
 }

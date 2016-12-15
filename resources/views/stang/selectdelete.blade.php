@@ -1,20 +1,23 @@
 @extends('layouts.master')
 
-@section('title', 'Mustangs')
+@section('title')
+    Delete Your Mustang Details
+@endsection
 
 @section('content')
-    <h1>Edit your Mustang</h1>
 
 
     @if(sizeof($mymustangs) == 0)
            <h3>You have not added any Mustangs to your account.<br>
           <a href='/mymustang'>Click here to add your Mustang's details.</a></h3>
     @else
+        <h1>  Delete Your Mustang Details</h1>
+        <form method='POST' action='/delete'>
 
-        {{-- Form to accept user input --}}
-        <form method='POST' action='/edit'>
+            {{ method_field('DELETE') }}
 
             {{ csrf_field() }}
+
             <h2>Id:  &nbsp;&nbsp;
             <select name='id'>
               @foreach($mymustangs as $mymustang)
@@ -22,8 +25,9 @@
               @endforeach
             </select> </h2>
             <br>
-            <input type='submit' class="button" value='Get Details'>
-      @endif
+            <input type='submit' class='button' value='Delete'>
 
-    </form>
+        </form>
+    @endif
+
 @endsection
