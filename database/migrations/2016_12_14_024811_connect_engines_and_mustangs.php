@@ -9,15 +9,10 @@ class ConnectEnginesAndMustangs extends Migration
   public function up()
 {
           Schema::table('mustangs', function (Blueprint $table) {
-
-          # Remove the field associated with the old way we were storing authors
-          # Whether you need this or not depends on whether your books table is built with an authors column
-          # $table->dropColumn('author');
-
-          # Add a new INT field called `author_id` that has to be unsigned (i.e. positive)
+            //Adding engine_id field
           $table->integer('engine_id')->unsigned();
 
-          # This field `author_id` is a foreign key that connects to the `id` field in the `authors` table
+           // This field `engine_id` is a foreign key that connects to the `id` field in the `engines` table
           $table->foreign('engine_id')->references('id')->on('engines');
 
       });

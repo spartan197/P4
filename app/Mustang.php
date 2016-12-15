@@ -8,8 +8,8 @@ class Mustang extends Model
 {
   /* Relationship Method */
   public function engine() {
-     # Book belongs to Author
-     # Define an inverse one-to-many relationship.
+     // Mustang belongs to Engine
+     // Define an inverse one-to-many relationship.
      return $this->belongsTo('App\Engine');
  }
 }

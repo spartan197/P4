@@ -22,15 +22,14 @@ a:link {
     clear: both;
 }
 
-
 /* End clearfix */
-
 
 /* http://mystrd.at/modern-clean-css-sticky-footer */
 html {
     position:relative;
     min-height:100%;
 }
+
 body {
     margin:0 0 100px; /* bottom = footer height */
     background-color: #3b3a36;
@@ -54,7 +53,6 @@ footer {
     padding:5px;
 }
 /* End Sticky Footer */
-
 
 section, header, nav {
     padding:5px 25px;
@@ -116,7 +114,6 @@ th, td {
   text-decoration:none;
 }
 
-
 /* Forms */
 label {
     margin-top:10px;
@@ -157,7 +154,6 @@ input[type=text],input[type=password],select {
     padding:0;
     list-style-type:none;
 }
-
 
 .flash_message {
      width:100%;

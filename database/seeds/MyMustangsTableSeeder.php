@@ -6,7 +6,6 @@ class MyMustangsTableSeeder extends Seeder
 {
   public function run()
   {
-
     DB::table('mymustangs')->insert([
         'created_at' => Carbon\Carbon::now()->toDateTimeString(),
         'updated_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -15,11 +14,9 @@ class MyMustangsTableSeeder extends Seeder
         'horsepower' => 500,
         'torque' => 600,
         'fuel_economy' => 15,
-        'user_id' => 1, # <--- NEW LINE
+        'user_id' => 1,
 
     ]);
-
-
 
     DB::table('mymustangs')->insert([
       'created_at' => Carbon\Carbon::now()->toDateTimeString(),
@@ -29,8 +26,7 @@ class MyMustangsTableSeeder extends Seeder
       'horsepower' => 600,
       'torque' => 620,
       'fuel_economy' => 12,
-      'user_id' => 2, # <--- NEW LINE
-
+      'user_id' => 2,
     ]);
 
     DB::table('mymustangs')->insert([
@@ -41,7 +37,7 @@ class MyMustangsTableSeeder extends Seeder
       'horsepower' => 800,
       'torque' => 820,
       'fuel_economy' => 9,
-      'user_id' => 1, # <--- NEW LINE
+      'user_id' => 1,
 
     ]);
   }

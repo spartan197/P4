@@ -9,5 +9,4 @@
   <br><br>
   <a href='/mymustang'>Click here to add another one</a><h2>
 
-
 @endsection

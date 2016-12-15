@@ -5,8 +5,6 @@
 @endsection
 
 @section('content')
-
-
     @if(sizeof($mymustangs) == 0)
            <h3>You have not added any Mustangs to your account.<br>
           <a href='/mymustang'>Click here to add your Mustang's details.</a></h3>
@@ -15,7 +13,6 @@
         <form method='POST' action='/delete'>
 
             {{ method_field('DELETE') }}
-
             {{ csrf_field() }}
 
             <h2>Id:  &nbsp;&nbsp;

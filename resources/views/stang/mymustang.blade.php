@@ -18,7 +18,7 @@
            <option value="2007">2007</option>
            <option value="2016">2016</option>
         </select> </h2>
-        
+
         <input type='submit' class="button" value='Generate Text'>
 
         {{-- Throws an error if the input is anything else other than a number between 1-99 --}}

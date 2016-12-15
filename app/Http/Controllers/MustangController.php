@@ -14,10 +14,8 @@ class MustangController extends Controller
      */
     public function index()
     {
-      $mustangs = Mustang::all();
-      return view('stang.index')->with(['mustangs'=>$mustangs]);
-
-
+        $mustangs = Mustang::all();
+        return view('stang.index')->with(['mustangs'=>$mustangs]);
     }
 
     /**
@@ -55,7 +53,6 @@ class MustangController extends Controller
           if($mustang->year_of_manufacture == $year)
               $mus = $mustang;
       }
-
       return view('stang.show1')->with('mus', $mus);
     }
 

@@ -6,21 +6,21 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateEnginesTable extends Migration
 {
-     public function up()
-     {
-          Schema::create('engines', function (Blueprint $table) {
+       public function up()
+       {
+           Schema::create('engines', function (Blueprint $table) {
 
-         $table->increments('id');
-         $table->timestamps();
+               $table->increments('id');
+               $table->timestamps();
 
-         $table->integer('cylinders');
-         $table->integer('capacity');
+               $table->integer('cylinders');
+               $table->integer('capacity');
 
-     });
- }
+           });
+        }
 
- public function down()
- {
-     Schema::drop('engines');
- }
+         public function down()
+         {
+             Schema::drop('engines');
+         }
 }

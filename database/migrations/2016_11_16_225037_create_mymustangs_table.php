@@ -16,7 +16,6 @@ class CreateMymustangsTable extends Migration
           Schema::create('mymustangs', function (Blueprint $table) {
 
                # Increments method will make a Primary, Auto-Incrementing field.
-               # Most tables start off this way
                $table->increments('id');
 
                # This generates two columns: `created_at` and `updated_at` to
@@ -29,9 +28,6 @@ class CreateMymustangsTable extends Migration
                $table->integer('horsepower');
                $table->integer('torque');
                $table->integer('fuel_economy');
-
-               # FYI: We're skipping the 'tags' field for now; more on that later.
-
        });
     }
 

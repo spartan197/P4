@@ -38,9 +38,7 @@
           @endif
       </ul>
     </nav>
-
    <br>
-
 
     <section>
         {{-- Main page content will be yielded here --}}

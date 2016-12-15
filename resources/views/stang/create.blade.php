@@ -35,6 +35,7 @@
            <div class='error'>{{ $errors->first('color') }}</div>
         </div>
         <br>
+
         <div class='form-group'>
            <label>Horsepower: </label>
            <input
@@ -46,6 +47,7 @@
            <div class='error'>{{ $errors->first('horsepower') }}</div>
         </div>
         <br>
+
         <div class='form-group'>
            <label>Torque: </label>
            <input
@@ -57,6 +59,7 @@
            <div class='error'>{{ $errors->first('torque') }}</div>
         </div>
         <br>
+
         <div class='form-group'>
             <label>Fuel Economy: </label>
             <input
@@ -68,13 +71,12 @@
             <div class='error'>{{ $errors->first('fuel_economy') }}</div>
          </div>
         <br>
+
         <div class='form-instructions'>
             *All fields are required
         </div>
 
         <button type="submit" class="button">Add My Mustang</button>
-
-
 
         <div class='error'>
             @if(count($errors) > 0)

@@ -5,11 +5,7 @@
 @stop
 
 @section('content')
-
     <h2>Editing My Mustang's Details</h2><br>
-
-
-
         <form method='POST' action='/edit'>
 
             {{ method_field('PUT') }}
@@ -40,6 +36,7 @@
                <div class='error'>{{ $errors->first('color') }}</div>
             </div>
             <br>
+
             <div class='form-group'>
                <label>Horsepower: </label>
                <input
@@ -51,6 +48,7 @@
                <div class='error'>{{ $errors->first('horsepower') }}</div>
             </div>
             <br>
+
             <div class='form-group'>
                <label>Torque: </label>
                <input
@@ -62,6 +60,7 @@
                <div class='error'>{{ $errors->first('torque') }}</div>
             </div>
             <br>
+
             <div class='form-group'>
                 <label>Fuel Economy: </label>
                 <input
@@ -73,6 +72,7 @@
                 <div class='error'>{{ $errors->first('fuel_economy') }}</div>
              </div>
             <br>
+            
             <div class='form-instructions'>
                 *All fields are required
             </div>

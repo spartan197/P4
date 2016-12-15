@@ -1,10 +1,8 @@
 @extends('layouts.master')
 
-
 @section('title')
     Mustangs ...!!!
 @stop
-
 
 {{--
 This `head` section will be yielded right before the closing </head> tag.
@@ -14,7 +12,6 @@ such as a page specific stylesheets.
 @section('head')
     <link href="/css/mustang.css" type='text/css' rel='stylesheet'>
 @stop
-
 
 @section('content')
 
