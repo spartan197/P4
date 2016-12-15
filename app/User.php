@@ -33,6 +33,6 @@ class User extends Authenticatable
     public function mymustangs() {
       // User has many MyMustangs
       // Defines a one-to-many relationship.
-      return $this->hasMany('App\MyMustang');
+      return $this->hasMany('App\Mymustang');
     }
 }
