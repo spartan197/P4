@@ -17,7 +17,7 @@ such as a page specific stylesheets.
 
       @foreach($mustangs as $mustang)
           <h2>{{ $mustang->name }}</h2>
-          <img src='{{ $mustang->picture }}'>
+          <img src='{{ $mustang->picture }}' alt="Mustang">
       @endforeach
 
 @stop
